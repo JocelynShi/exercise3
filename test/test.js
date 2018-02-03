@@ -34,11 +34,11 @@ describe('jQuery', function () {
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
       $.ajax({
           url:"https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js",
-          success: res => {
+          success:function (res) {
             should.exist(res);
             done();
           },
-          error:err => {
+          error:function (err) {
             console.log(err);
           }
       })
